@@ -7,10 +7,10 @@ public class Inicio {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+
         int option = 0;
-        
-        do{
+
+        do {
             System.out.println("-------------------------");
             System.out.println(" Aplicación de Mensajes");
             System.out.println(" 1. Crear Mensaje");
@@ -19,6 +19,20 @@ public class Inicio {
             System.out.println(" 4. Eliminar Mensaje");
             System.out.println(" 5. Salir");
             option = sc.nextInt();
-        }while(option != 5);
+            switch (option) {
+                case 1:
+                    MensajeService.crearMensaje();
+                    break;
+                case 2:
+                    MensajeService.listarMensaje();
+                    break;
+                case 3:
+                    MensajeService.actualizarMensaje();
+                    break;
+                case 4:
+                    MensajeService.borrarMensaje();
+                    break;
+            }
+        } while (option != 5);
     }
 }
