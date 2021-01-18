@@ -1,13 +1,10 @@
 package com.mycompany.mensajes_app;
-
-import java.sql.*;
 import java.util.Scanner;
 
 public class Inicio {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         int option = 0;
 
         do {
@@ -15,8 +12,8 @@ public class Inicio {
             System.out.println(" Aplicación de Mensajes");
             System.out.println(" 1. Crear Mensaje");
             System.out.println(" 2. Listar Mensaje");
-            System.out.println(" 3. Editar Mensaje");
-            System.out.println(" 4. Eliminar Mensaje");
+            System.out.println(" 3. Eliminar Mensaje");
+            System.out.println(" 4. Editar Mensaje");
             System.out.println(" 5. Salir");
             option = sc.nextInt();
             switch (option) {
@@ -27,10 +24,10 @@ public class Inicio {
                     MensajeService.listarMensaje();
                     break;
                 case 3:
-                    MensajeService.actualizarMensaje();
+                    MensajeService.borrarMensaje();
                     break;
                 case 4:
-                    MensajeService.borrarMensaje();
+                    MensajeService.actualizarMensaje();
                     break;
             }
         } while (option != 5);

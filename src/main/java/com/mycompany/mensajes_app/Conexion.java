@@ -8,9 +8,7 @@ public class Conexion {
         try {
 //            Class.forName("com.mysql.cj.jdbc.Driver");
             conection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mensajes_app?serverTimezone=UTC","root", "");
-            if(conection != null){
-                System.out.println("Conexión Exitosa");
-            }else{
+            if(conection == null){
                 System.out.println("Error de Conexión");
             }
         } catch (SQLException e) {
